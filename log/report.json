@@ -1,0 +1,120 @@
+[
+  {
+    "uri": "features/specs/pesquisar_livro.feature",
+    "id": "pesquisar-livro-no-site-submarino-e-comparar-no-site-da-saraiva-e-amazon",
+    "keyword": "Funcionalidade",
+    "name": "Pesquisar livro no site Submarino e comparar no site da Saraiva e Amazon",
+    "description": "",
+    "line": 4,
+    "tags": [
+      {
+        "name": "@pesquisa_livro",
+        "line": 3
+      }
+    ],
+    "elements": [
+      {
+        "keyword": "Contexto",
+        "name": "",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que acesse o site Submarino",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/pesquisar_livro.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3802746300
+            }
+          }
+        ]
+      },
+      {
+        "id": "pesquisar-livro-no-site-submarino-e-comparar-no-site-da-saraiva-e-amazon;validar-o-nome-do-autor-e-isbn-são-iguais-nos-sites",
+        "keyword": "Cenario",
+        "name": "Validar o nome do autor e ISBN são iguais nos sites",
+        "description": "",
+        "line": 10,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@pesquisa_livro",
+            "line": 3
+          },
+          {
+            "name": "@pesquisa_livro_sites",
+            "line": 9
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "clico no link livros",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/pesquisar_livro.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7191803800
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "seleciono o primeiro livro da pesquisa guardo o nome do autor e ISBN",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/pesquisar_livro.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3432118500
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "visito o site da Amazon e pesquiso o livro pelo ISBN e guardo o nome do autor e ISBN",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/pesquisar_livro.rb:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8392271400
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "visito o site da Disal e pesquiso o livro pelo ISBN e guardo o nome do autor e ISBN",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/pesquisar_livro.rb:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11754014200
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "valido o nome do autor e ISBN são iguais nos sites",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/pesquisar_livro.rb:25"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "ArgumentError (ArgumentError)\n./features/page/pesquisar_livro_page.rb:50:in `valida_infos'\n./features/step_definitions/pesquisar_livro.rb:26:in `\"valido o nome do autor e ISBN são iguais nos sites\"'\nfeatures/specs/pesquisar_livro.feature:15:in `Então valido o nome do autor e ISBN são iguais nos sites'",
+              "duration": 135100
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
