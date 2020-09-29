@@ -14,4 +14,4 @@ Esquema do Cenario: Validar mensagem de login inválido
 
 Exemplos:
 |      email        |      senha      |
-|teste@gmail.com |      123456     |
+|teste@gmail.com    |      123456     |
