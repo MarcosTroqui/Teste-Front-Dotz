@@ -8,4 +8,8 @@ module Pages
   def pesquisa
     PesquisaLivro.new
   end
+
+  def login
+    LoginIncorreto.new
+  end
 end

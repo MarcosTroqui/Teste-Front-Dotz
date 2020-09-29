@@ -1,14 +1,14 @@
 [
   {
-    "uri": "features/specs/pesquisar_livro.feature",
-    "id": "pesquisar-livro-no-site-submarino-e-comparar-no-site-da-saraiva-e-amazon",
+    "uri": "features/specs/login_incorreto.feature",
+    "id": "realizar-o-login-do-site-submarino",
     "keyword": "Funcionalidade",
-    "name": "Pesquisar livro no site Submarino e comparar no site da Saraiva e Amazon",
+    "name": "Realizar o login do site submarino",
     "description": "",
     "line": 4,
     "tags": [
       {
-        "name": "@pesquisa_livro",
+        "name": "@login_incorreto",
         "line": 3
       }
     ],
@@ -29,21 +29,21 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3802746300
+              "duration": 3668685500
             }
           }
         ]
       },
       {
-        "id": "pesquisar-livro-no-site-submarino-e-comparar-no-site-da-saraiva-e-amazon;validar-o-nome-do-autor-e-isbn-são-iguais-nos-sites",
-        "keyword": "Cenario",
-        "name": "Validar o nome do autor e ISBN são iguais nos sites",
+        "id": "realizar-o-login-do-site-submarino;validação-login-incorreto;;2",
+        "keyword": "Esquema do Cenário",
+        "name": "Validação Login Incorreto",
         "description": "",
-        "line": 10,
+        "line": 17,
         "type": "scenario",
         "tags": [
           {
-            "name": "@pesquisa_livro",
+            "name": "@login_incorreto",
             "line": 3
           },
           {
@@ -54,63 +54,37 @@
         "steps": [
           {
             "keyword": "Quando ",
-            "name": "clico no link livros",
+            "name": "clico no link Entrar",
             "line": 11,
             "match": {
-              "location": "features/step_definitions/pesquisar_livro.rb:7"
+              "location": "features/step_definitions/login_incorreto.rb:3"
             },
             "result": {
-              "status": "passed",
-              "duration": 7191803800
+              "status": "pending",
+              "error_message": "TODO (Cucumber::Pending)\n./features/step_definitions/login_incorreto.rb:4:in `\"clico no link Entrar\"'\nfeatures/specs/login_incorreto.feature:17:in `Quando clico no link Entrar'\nfeatures/specs/login_incorreto.feature:11:in `Quando clico no link Entrar'",
+              "duration": 134100
             }
           },
           {
             "keyword": "E ",
-            "name": "seleciono o primeiro livro da pesquisa guardo o nome do autor e ISBN",
+            "name": "insiro um 'padrao' e '0'",
             "line": 12,
             "match": {
-              "location": "features/step_definitions/pesquisar_livro.rb:11"
+              "location": "features/step_definitions/login_incorreto.rb:7"
             },
             "result": {
-              "status": "passed",
-              "duration": 3432118500
-            }
-          },
-          {
-            "keyword": "E ",
-            "name": "visito o site da Amazon e pesquiso o livro pelo ISBN e guardo o nome do autor e ISBN",
-            "line": 13,
-            "match": {
-              "location": "features/step_definitions/pesquisar_livro.rb:15"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 8392271400
-            }
-          },
-          {
-            "keyword": "E ",
-            "name": "visito o site da Disal e pesquiso o livro pelo ISBN e guardo o nome do autor e ISBN",
-            "line": 14,
-            "match": {
-              "location": "features/step_definitions/pesquisar_livro.rb:20"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 11754014200
+              "status": "skipped"
             }
           },
           {
             "keyword": "Então ",
-            "name": "valido o nome do autor e ISBN são iguais nos sites",
-            "line": 15,
+            "name": "valido o retorno da 'ean' de login inválido",
+            "line": 13,
             "match": {
-              "location": "features/step_definitions/pesquisar_livro.rb:25"
+              "location": "features/step_definitions/login_incorreto.rb:11"
             },
             "result": {
-              "status": "failed",
-              "error_message": "ArgumentError (ArgumentError)\n./features/page/pesquisar_livro_page.rb:50:in `valida_infos'\n./features/step_definitions/pesquisar_livro.rb:26:in `\"valido o nome do autor e ISBN são iguais nos sites\"'\nfeatures/specs/pesquisar_livro.feature:15:in `Então valido o nome do autor e ISBN são iguais nos sites'",
-              "duration": 135100
+              "status": "skipped"
             }
           }
         ]
